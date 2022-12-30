@@ -1,0 +1,275 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\CalibrationTool.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\CalibrationTool.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 CalibrationTool"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "CalibrationTool 1.0 版",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2009",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_CALIBRATIONTOOL_DIALOG DIALOGEX 0, 0, 659, 467
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "CalibrationTool"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "退出",IDOK,615,446,37,14
+    CONTROL         "",IDC_STATIC_S,"Static",SS_BLACKFRAME,7,7,433,320
+    PUSHBUTTON      "打开摄像头",IDC_Open_Cam,559,17,60,14
+    EDITTEXT        IDC_Cam_Num,529,17,23,14,ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "获取摄像头个数",IDC_GetCamNum,461,17,65,14
+    EDITTEXT        IDC_Cam_Serial,623,17,23,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "获取图片",IDC_Get_Pic,531,114,52,14
+    GROUPBOX        "棋盘格设定",IDC_STATIC,455,41,197,61
+    GROUPBOX        "摄像头操作",IDC_STATIC,453,7,197,28
+    LTEXT           "行内点数：",IDC_STATIC,467,53,41,8
+    LTEXT           "列内点数：",IDC_STATIC,557,51,41,8
+    LTEXT           "行宽：",IDC_STATIC,467,67,25,8
+    LTEXT           "列宽：",IDC_STATIC,557,65,25,8
+    EDITTEXT        IDC_EDIT3,511,49,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,603,48,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,511,65,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,603,63,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "设定棋盘格规格",IDC_BUTTON4,469,83,81,14
+    PUSHBUTTON      "重新设定规格",IDC_ResetChessboard,563,83,81,14
+    GROUPBOX        "图片操作",IDC_STATIC,455,104,197,43
+    PUSHBUTTON      "棋盘格识别",IDC_ShowChessboard,464,113,63,14
+    PUSHBUTTON      "显示棋盘点",IDC_ShowCorners,465,293,178,14
+    GROUPBOX        "内参数标定",IDC_STATIC,455,149,197,49
+    PUSHBUTTON      "存储为内参数标定图片",IDC_SaveAsInPic,461,161,88,14
+    PUSHBUTTON      "删除所有图片",IDC_DelPic,563,161,79,14
+    PUSHBUTTON      "标定内参数",IDC_CaliInPara,461,179,88,14
+    PUSHBUTTON      "保存内参数",IDC_Save_In_para,563,179,79,14
+    EDITTEXT        IDC_Ts,7,328,433,132,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | WS_VSCROLL | WS_HSCROLL
+    GROUPBOX        "外参数标定",IDC_STATIC,455,200,197,45
+    PUSHBUTTON      "导入内参数",IDC_LoadInPara,465,210,81,14
+    PUSHBUTTON      "标定外参数(正)",IDC_CaliExPara,563,210,81,14
+    PUSHBUTTON      "保存外参数",IDC_SaveExPara,465,227,81,14
+    PUSHBUTTON      "标定外参数(反)",IDC_CaliExParai,563,227,81,14
+    GROUPBOX        "定标检验",IDC_STATIC,455,247,197,30
+    PUSHBUTTON      "导入外参数",IDC_BUTTON17,467,257,80,14
+    PUSHBUTTON      "检验",IDC_BUTTON18,563,257,81,14
+    PUSHBUTTON      "连续显示",IDC_BUTTON1,550,129,53,14
+    PUSHBUTTON      "反转",IDC_BUTTON2,286,150,38,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    PUSHBUTTON      "显示选择点",IDC_BUTTON3,559,307,14,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT1,497,311,116,14,ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "<",IDC_BUTTON5,467,309,20,14
+    PUSHBUTTON      ">",IDC_BUTTON6,620,310,20,14
+    EDITTEXT        IDC_O_Serial,503,362,40,14,ES_AUTOHSCROLL
+    LTEXT           "原点序号",IDC_STATIC,465,365,33,8
+    LTEXT           "X轴点序号",IDC_STATIC,461,382,37,8
+    EDITTEXT        IDC_X_Serial,503,378,40,14,ES_AUTOHSCROLL
+    LTEXT           "X轴间距",IDC_STATIC,469,398,29,8
+    EDITTEXT        IDC_X_PSP,503,394,40,14,ES_AUTOHSCROLL
+    LTEXT           "Y轴点序号",IDC_STATIC,552,382,37,8
+    EDITTEXT        IDC_Y_Serial,594,378,40,14,ES_AUTOHSCROLL
+    LTEXT           "Y轴间距",IDC_STATIC,561,398,29,8
+    EDITTEXT        IDC_Y_PSP,594,394,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "坐标推定",IDC_BUTTON7,629,349,10,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT10,503,347,108,14,ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "标定外参数",IDC_BUTTON8,458,408,96,14
+    PUSHBUTTON      "检验",IDC_BUTTON9,555,407,96,14
+    GROUPBOX        "不完整棋盘格外参数标定",IDC_STATIC,455,283,197,141
+    PUSHBUTTON      "原点",IDC_BUTTON10,498,330,38,14
+    PUSHBUTTON      "X",IDC_BUTTON11,536,330,38,14
+    PUSHBUTTON      "Y",IDC_BUTTON12,574,330,38,14
+    PUSHBUTTON      "正向",IDC_BUTTON13,243,151,40,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    PUSHBUTTON      "Button14",IDC_BUTTON14,244,235,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    PUSHBUTTON      "L",IDC_BUTTON15,588,113,22,14
+    PUSHBUTTON      "R",IDC_BUTTON16,613,113,22,14
+    PUSHBUTTON      "O",IDC_BUTTON19,614,131,22,14
+    PUSHBUTTON      "SAVE",IDC_BUTTON20,471,130,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "CalibrationTool Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "CalibrationTool\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2009\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "CalibrationTool.EXE\0"
+            VALUE "ProductName", "CalibrationTool 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_CALIBRATIONTOOL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 652
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 460
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 CalibrationTool(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\CalibrationTool.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

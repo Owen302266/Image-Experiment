@@ -1,0 +1,51 @@
+// SingleCVC.h: interface for the CSingleCVC class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#if !defined AN_SINGLECVC_H_
+#define AN_SINGLECVC_H_
+
+#include "cvut/cvut.h"
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace cvut;
+using namespace std;
+
+#pragma comment(lib,"cxcore.lib")
+#pragma comment(lib,"cv.lib")
+#pragma comment(lib,"highgui.lib")
+
+typedef struct RoterMatrix
+{
+	double r11;
+	double r12;
+	double r13;
+	double r21;
+	double r22;
+	double r23;
+	double r31;
+	double r32;
+	double r33;
+}* pRoterMatrix;
+
+typedef struct MoveVecter
+{
+	double tx;
+	double ty;
+	double tz;
+}*pMoveVecter;
+
+
+class CSingleCVC  
+{
+public:
+	CSingleCVC();
+	virtual ~CSingleCVC();
+
+	bool FindCross(char * path,int linenum,int rownum)
+	static void Caliberation(char * picpath,pRoterMatrix retRoter,pMoveVecter retMv);
+};
+
+#endif 
