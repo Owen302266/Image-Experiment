@@ -24,22 +24,22 @@ class DH:
     def alf(self, i):  # output alf parameter
         return self.DHarray[i - 1, 3]
 
-    # noinspection PyMethodMayBeStatic
-    def rotation_x(self, alfa):  # rotate of x-axis
+    @staticmethod
+    def rotation_x(alfa):  # rotate of x-axis
         return np.array([[1, 0, 0, 0],
                         [0, cos(alfa), -sin(alfa), 0],
                         [0, sin(alfa), cos(alfa), 0],
                         [0, 0, 0, 1]])
 
-    # noinspection PyMethodMayBeStatic
-    def rotation_y(self, theta):  # rotate of y-axis
+    @staticmethod
+    def rotation_y(theta):  # rotate of y-axis
         return np.array([[cos(theta), 0, sin(theta), 0],
                         [0, 1, 0, 0],
                         [-sin(theta), 0, cos(theta), 0],
                         [0, 0, 0, 1]])
 
-    # noinspection PyMethodMayBeStatic
-    def rotation_z(self, angle):  # rotate of z-axis
+    @staticmethod
+    def rotation_z(angle):  # rotate of z-axis
         return np.array([[cos(angle), -sin(angle), 0, 0],
                         [sin(angle), cos(angle), 0, 0],
                         [0, 0, 1, 0],
@@ -68,8 +68,8 @@ class DH:
         return self.Trans(1, matrix[0]) @ self.Trans(2, matrix[1]) @ self.Trans(3, matrix[2]) \
                @ self.Trans(4, matrix[3]) @ self.Trans(5, matrix[4]) @ self.Trans(6, matrix[5])
 
-    # noinspection PyMethodMayBeStatic
-    def output_range(self, matrix):  # output range in [-pi, pi]
+    @staticmethod
+    def output_range(matrix):  # output range in [-pi, pi]
         for item in matrix:
             if item > pi:
                 item -= 2 * pi
